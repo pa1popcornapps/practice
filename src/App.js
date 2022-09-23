@@ -4,17 +4,18 @@ import Header from "./component/header/Header"
 import Body from './component/body/Body';
 import Footer from './component/footer/Footer';
 
-function App() {
+export default function App() {
+
   return (
     <div >
-    <div className="App">
-      <Header />
+      <div className="App">
+        <Header />
+      </div>
+      <Body />
+      <Footer />
+    
     </div>
-    <Body />
-    <Footer />
-   
-  </div>
   );
 }
 
-export default App;
+
