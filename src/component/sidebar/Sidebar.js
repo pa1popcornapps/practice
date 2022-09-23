@@ -10,7 +10,7 @@ import {
     Link
 } from "react-router-dom";
 export default function SideBar() {
-    
+
     return (
         <Router>
             <div className="side-bar">
@@ -49,7 +49,6 @@ export default function SideBar() {
 
                     </div>
                 </div>
-                
                 <Switch>
                     <Route exact path="/">
                         <Home />
