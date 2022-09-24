@@ -3,6 +3,7 @@ import About from './About';
 import Contact from './Contact';
 import State from './documentation/state-props/State';
 import Prop from './documentation/state-props/Prop';
+import Footer from '../footer/Footer';
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,7 +11,6 @@ import {
     Link
 } from "react-router-dom";
 export default function SideBar() {
-
     return (
         <Router>
             <div className="side-bar">
@@ -24,12 +24,8 @@ export default function SideBar() {
                         </div>
                         <nav>
                             <h5>React Router Example</h5>
-
                             <div>
                                 <ul className="list-items">
-                                    <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                        <Link to="/home" >Home</Link>
-                                    </li>
                                     <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                         <Link to="/about" >About</Link>
                                     </li>
@@ -43,16 +39,11 @@ export default function SideBar() {
                                         <Link to="/documentation/state-props/Prop" >Prop</Link>
                                     </li>
                                 </ul>
-
                             </div>
                         </nav>
-
                     </div>
                 </div>
                 <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
                     <Route path="/about">
                         <About />
                     </Route>
@@ -67,14 +58,7 @@ export default function SideBar() {
                     </Route>
                 </Switch>
             </div>
-
         </Router>
     );
 }
-function Home() {
-    return (
-        <div>
-            <h2>Home</h2>
-        </div>
-    );
-}
+
