@@ -1,8 +1,31 @@
-import React from 'react';
-export default function State() {
-    return (
-        <div className="state">
-            <p>React State</p>
-        </div>
-    );
+import React  from 'react';
+class State extends React.Component {
+    constructor() {
+        super();
+        this.state = { displayBio: false };
+        this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
+    }
+    toggleDisplayBio() {
+        this.setState({ displayBio: !this.state.displayBio });
+    }
+    render() {
+        return (
+            <div className="state">
+                <h1>React State</h1>
+                {
+                    this.state.displayBio ? (
+                        <div>
+                            <p><h4>State inside component</h4></p>
+                            <button onClick={this.toggleDisplayBio}> Show Less </button>
+                        </div>
+                    ) : (
+                        <div>
+                            <button onClick={this.toggleDisplayBio}> Read More </button>
+                        </div>
+                    )
+                }
+            </div>
+        )
+    }
 }
+export default State;  
