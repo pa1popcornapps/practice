@@ -26,7 +26,6 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import StudentList from './documentation/employee-api/StudentList';
 export default function SideBar() {
     return (
         <Router>
@@ -110,9 +109,6 @@ export default function SideBar() {
                                     </li>
                                     <h5>React Api Calls</h5>
                                     <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                        <Link to="/documentation/employee-api/StudentList" >Student Api Calls</Link>
-                                    </li>
-                                    <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                         <Link to="/documentation/api-call/EmployeeApi" >Employee Api Calls</Link>
                                     </li>
                                 </ul>
@@ -181,9 +177,6 @@ export default function SideBar() {
                         </Route>
                         <Route path="/documentation/hooks/class-hooks/HooksSequence">
                             <HooksSequence />
-                        </Route>
-                        <Route path="/documentation/employee-api/StudentList">
-                            <StudentList />
                         </Route>
                         <Route path="/documentation/api-call/EmployeeApi">
                             <EmployeeApi/>

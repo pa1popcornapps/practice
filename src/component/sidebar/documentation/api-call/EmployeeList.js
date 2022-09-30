@@ -11,8 +11,7 @@ function EmployeeList(props) {
         GetData();
     }, []);
     let deleteeployee = (id) => {
-        debugger;
-        axios.delete('curl "https://api-generator.retool.com/Fkx6QU/data"' + id)
+        axios.delete('https://api-generator.retool.com/Fkx6QU/data' + id)
             .then((result) => {
                 props.history.push('/EmployeList')
             });
