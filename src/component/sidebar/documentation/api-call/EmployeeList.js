@@ -3,24 +3,29 @@ import axios from 'axios';
 import { useState, useEffect } from 'react'
 function EmployeeList(props) {
     const [data, setData] = useState([]);
+    const GetData = async () => {
+        const result = await axios('https://api-generator.retool.com/Fkx6QU/data');
+        setData(result.data);
+    };
     useEffect(() => {
-        const GetData = async () => {
-            const result = await axios('https://api-generator.retool.com/Fkx6QU/data');
-            setData(result.data);
-        };
+    
         GetData();
     }, []);
-    let deleteeployee = (id) => {
-        axios.delete('https://api-generator.retool.com/Fkx6QU/data' + id)
+    let deleteeployee = (l) => {
+        alert(l.id)
+        let g=l.id
+        axios.delete('https://api-generator.retool.com/Fkx6QU/data/' + l.id)
             .then((result) => {
                 props.history.push('/EmployeList')
             });
+            GetData();
     };
-    let editemployee = (id) => {
+    let editemployee = (l) => {
         props.history.push({
-            pathname: '/edit/' + id
+            pathname: '/edit/' + l.id
         });
     };
+
     return (
         <div>
             <div>
@@ -52,8 +57,9 @@ function EmployeeList(props) {
                                                 <td>{item.Location}</td>
                                                 <td>
                                                     <div class="btn-group">
-                                                        <button className="btn btn-warning" onClick={() => { editemployee(item.Id) }}>Edit</button>
-                                                        <button className="btn btn-warning" onClick={() => { deleteeployee(item.Id) }}>Delete</button>
+                                                 
+                                                        <button className="btn btn-warning" onClick={() => { editemployee(item) }}>Edit</button>
+                                                        <button className="btn btn-warning" onClick={() => { deleteeployee(item) }}>Delete</button>
                                                     </div>
                                                 </td>
                                             </tr>

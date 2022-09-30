@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 function EditEmployee(props) {
     const [employee, setemployee] = useState({ Id: '', Name: '', Department: '', Age: '', Location: '', Salary: '' });
-    const Url = "https://api-generator.retool.com/Fkx6QU/data" + props.match.params.id;
+    const Url = "https://api-generator.retool.com/Fkx6QU/data/" + props.match.params.id;
     useEffect(() => {
         const GetData = async () => {
             const result = await axios(Url);
@@ -13,7 +13,7 @@ function EditEmployee(props) {
     const UpdateEmployee = (e) => {
         e.preventDefault();
         const data = { Id: props.match.params.id, Name: employee.Name, Department: employee.Department, Age: employee.Age, Location: employee.Location, Salary: employee.Salary};
-        axios.post('https://api-generator.retool.com/Fkx6QU/data', data)
+        axios.put(Url, data)
             .then((result) => {
                 props.history.push('/EmployeList')
             });
@@ -29,7 +29,7 @@ function EditEmployee(props) {
                     <div>
                         <div>
                             <div>
-                                <div onSubmit={UpdateEmployee}>
+                                <form onSubmit={UpdateEmployee}>
                                     <h1>Update Employee</h1>
                                     <div className="mb-3">
                                         <input type="text" name="Name" id="Name" placeholder="Name" value={employee.Name} onChange={onChange} />
@@ -56,7 +56,7 @@ function EditEmployee(props) {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>

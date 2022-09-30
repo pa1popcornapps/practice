@@ -20,6 +20,8 @@ import UseMemo from './documentation/hooks/functional-hooks/additional-hooks/Use
 import UseReducer from './documentation/hooks/functional-hooks/additional-hooks/UseReducer';
 import UseRef from './documentation/hooks/functional-hooks/additional-hooks/UseRef';
 import EmployeeApi from './documentation/api-call/EmployeeApi';
+import UnControlledForms from './documentation/forms/UnControlledForms';
+import ControlledForms from './documentation/forms/ControlledForms';
 import {
     BrowserRouter as Router,
     Switch,
@@ -70,6 +72,13 @@ export default function SideBar() {
                                     </li>
                                     <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                         <Link to="/documentation/component-api/find-dom" >Find Dom Node</Link>
+                                    </li>
+                                    <h5>React forms</h5>
+                                    <li data-bs-toggle="offcanvas" data-bs-target="#demo">
+                                        <Link to="/documentation/forms/ControlledForms" >Controlled Forms</Link>
+                                    </li>
+                                    <li data-bs-toggle="offcanvas" data-bs-target="#demo">
+                                        <Link to="/documentation/forms/UnControlledForms" >Un Controlled Forms</Link>
                                     </li>
                                     <h5>React functional component Hooks</h5>
                                     <li data-bs-toggle="offcanvas" data-bs-target="#demo">
@@ -145,6 +154,12 @@ export default function SideBar() {
                         <Route path="/documentation/component-api/find-dom">
                             <FindDom />
                         </Route>
+                        <Route path="/documentation/forms/ControlledForms">
+                            <ControlledForms />
+                        </Route>
+                        <Route path="/documentation/forms/UnControlledForms">
+                            <UnControlledForms />
+                        </Route>
                         <Route path="/documentation/hooks/functional-hooks/UseState">
                             <UseState />
                         </Route>
@@ -170,7 +185,7 @@ export default function SideBar() {
                             <UseMemo />
                         </Route>
                         <Route path="/documentation/hooks/functional-hooks/additional-hooks/UseReducer">
-                            <UseReducer/>
+                            <UseReducer />
                         </Route>
                         <Route path="/documentation/hooks/functional-hooks/additional-hooks/UseRef">
                             <UseRef />
@@ -179,7 +194,7 @@ export default function SideBar() {
                             <HooksSequence />
                         </Route>
                         <Route path="/documentation/api-call/EmployeeApi">
-                            <EmployeeApi/>
+                            <EmployeeApi />
                         </Route>
                     </Switch>
                 </div>
