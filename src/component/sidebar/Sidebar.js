@@ -19,13 +19,14 @@ import UseLayoutEffect from './documentation/hooks/functional-hooks/additional-h
 import UseMemo from './documentation/hooks/functional-hooks/additional-hooks/UseMemo';
 import UseReducer from './documentation/hooks/functional-hooks/additional-hooks/UseReducer';
 import UseRef from './documentation/hooks/functional-hooks/additional-hooks/UseRef';
-import CreateEmployee from './documentation/employee-api/CreateEmploye';
+import EmployeeApi from './documentation/api-call/EmployeeApi';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
+import StudentList from './documentation/employee-api/StudentList';
 export default function SideBar() {
     return (
         <Router>
@@ -109,7 +110,10 @@ export default function SideBar() {
                                     </li>
                                     <h5>React Api Calls</h5>
                                     <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                        <Link to="/documentation/employee-api/CreateEmploye" >Api Calls</Link>
+                                        <Link to="/documentation/employee-api/StudentList" >Student Api Calls</Link>
+                                    </li>
+                                    <li data-bs-toggle="offcanvas" data-bs-target="#demo">
+                                        <Link to="/documentation/api-call/EmployeeApi" >Employee Api Calls</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -178,8 +182,11 @@ export default function SideBar() {
                         <Route path="/documentation/hooks/class-hooks/HooksSequence">
                             <HooksSequence />
                         </Route>
-                        <Route path="/documentation/employee-api/CreateEmploye">
-                            <CreateEmployee />
+                        <Route path="/documentation/employee-api/StudentList">
+                            <StudentList />
+                        </Route>
+                        <Route path="/documentation/api-call/EmployeeApi">
+                            <EmployeeApi/>
                         </Route>
                     </Switch>
                 </div>
