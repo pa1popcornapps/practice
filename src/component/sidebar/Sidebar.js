@@ -22,6 +22,7 @@ import UseRef from './documentation/hooks/functional-hooks/additional-hooks/UseR
 import EmployeeApi from './documentation/api-call/EmployeeApi';
 import UnControlledForms from './documentation/forms/UnControlledForms';
 import ControlledForms from './documentation/forms/ControlledForms';
+import AccountApi from './documentation/atm/AccountApi';
 import {
     BrowserRouter as Router,
     Switch,
@@ -222,7 +223,7 @@ export default function SideBar() {
                                         <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
                                             <ul class="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                                    <Link to="/documentation/api-call/EmployeeApi" >Atm Project</Link>
+                                                    <Link to="/documentation/atm/AccountApi" >Atm Project</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -314,6 +315,9 @@ export default function SideBar() {
                         </Route>
                         <Route path="/documentation/api-call/EmployeeApi">
                             <EmployeeApi />
+                        </Route>
+                        <Route path="/documentation/atm/AccountApi">
+                            <AccountApi />
                         </Route>
                     </Switch>
                 </div>
