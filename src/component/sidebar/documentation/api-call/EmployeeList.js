@@ -14,7 +14,7 @@ function EmployeeList(props) {
     let deleteeployee = (l) => {
         alert(l.id)
         let g=l.id
-        axios.delete('https://api-generator.retool.com/Fkx6QU/data/' + l.id)
+        axios.delete('https://api-generator.retool.com/Fkx6QU/data/' + g)
             .then((result) => {
                 props.history.push('/EmployeList')
             });

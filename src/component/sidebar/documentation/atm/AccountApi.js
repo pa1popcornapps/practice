@@ -15,7 +15,7 @@ function AccountApi() {
                 <Link to={'/CreateAccount'} className="nav-link">Add Account</Link>    
               </li>    
               <li className="nav-item">    
-                <Link to={'/AccountList'} className="nav-link">Account List</Link>    
+                <Link to={'/AccountList'} className="nav-link">Transaction Details</Link>    
               </li>    
             </ul>    
           </div>    

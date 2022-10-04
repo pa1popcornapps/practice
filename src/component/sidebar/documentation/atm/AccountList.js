@@ -17,7 +17,7 @@ function AccountList(props) {
         let g = l.id
         axios.delete('https://api-generator.retool.com/4dcBri/data/' + g)
             .then((result) => {
-                props.history.push('/EmployeList')
+                props.history.push('/AccountList')
             });
         GetData();
     };
@@ -26,7 +26,6 @@ function AccountList(props) {
             pathname: '/edit/' + l.id
         });
     };
-    
     function handleChange(event) {
         let l=String(event.target.value);
         let arr=[]
@@ -34,16 +33,18 @@ function AccountList(props) {
                 let x=String(data[key].accountNo)
                 arr.push(x.substring(0,l.length))
             }
-            let fil=[]
             let main=[]
             for(let i=0;i<arr.length;i++){
-                if(l==arr[i]){
-                   fil.push(i)
-                   console.log(data[i])
+                if(l===arr[i]){
                    main.push(data[i])
                 }
             }
             setData1(main);
+            if(main.length===0){
+                document.getElementById('no-data').style.display='block'
+            }else{
+                document.getElementById('no-data').style.display='none'
+            }
             
       }
     return (
@@ -53,11 +54,11 @@ function AccountList(props) {
                     <div>
                         <div>
                             <div>
-                                <i className="fa fa-align-justify"></i> Account Details
+                                <i className="fa fa-align-justify"></i> Account Number
                             </div>
                             <input name="firstName" onChange={handleChange} />
                             <div>
-                                <table class="table">
+                                <table class="table" >
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -68,7 +69,7 @@ function AccountList(props) {
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="table">
                                         {
                                             data1.map((item) => {
                                                 return <tr>
@@ -87,6 +88,9 @@ function AccountList(props) {
                                             })}
                                     </tbody>
                                 </table>
+                                <div className="p-2" id="no-data">
+                                    <h5>No data Found</h5>
+                                </div>
                             </div>
                         </div>
                     </div>

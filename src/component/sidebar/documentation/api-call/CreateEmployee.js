@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 function CreateEmployee(props) {
     const [employee, setemployee] = useState({ Name: '', Department: '', Age: '', Location: '', Salary: ''});
-    const [showLoading, setShowLoading] = useState(false);
+   
     const apiUrl = "https://api-generator.retool.com/Fkx6QU/data";
     const Insertemployee = (e) => {
         e.preventDefault();

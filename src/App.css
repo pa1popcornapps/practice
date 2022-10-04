@@ -139,3 +139,6 @@ a:hover{color:coral;background-color: aqua;border-radius:5px;margin-bottom:7px;}
 .accordion-body{
  list-style: none;
 }
+.group-item{
+  display:flex;flex-direction: column;
+}
