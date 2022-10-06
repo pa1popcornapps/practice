@@ -23,6 +23,8 @@ import EmployeeApi from './documentation/api-call/EmployeeApi';
 import UnControlledForms from './documentation/forms/UnControlledForms';
 import ControlledForms from './documentation/forms/ControlledForms';
 import AccountApi from './documentation/atm/AccountApi';
+import ParentP from './documentation/data-transfer/parent-to-child/ParentP';
+import ParentC from './documentation/data-transfer/child-to-parent/ParentC';
 import {
     BrowserRouter as Router,
     Switch,
@@ -106,10 +108,10 @@ export default function SideBar() {
                                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <ul class="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                                    <Link to="/documentation/forms/ControlledForms" >Parent To Child</Link>
+                                                    <Link to="/documentation/data-transfer/parent-to-child/ParentP" >Parent To Child</Link>
                                                 </li>
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                                    <Link to="/documentation/forms/UnControlledForms" >Child To Parent</Link>
+                                                    <Link to="/documentation/data-transfer/child-to-parent/ParentC" >Child To Parent</Link>
                                                 </li>
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/forms/UnControlledForms" >Between Sibilings</Link>
@@ -273,6 +275,12 @@ export default function SideBar() {
                         </Route>
                         <Route path="/documentation/component-api/find-dom">
                             <FindDom />
+                        </Route>
+                        <Route path="/documentation/data-transfer/parent-to-child/ParentP">
+                            <ParentP/>
+                        </Route>
+                        <Route path="/documentation/data-transfer/child-to-parent/ParentC">
+                            <ParentC/>
                         </Route>
                         <Route path="/documentation/forms/ControlledForms">
                             <ControlledForms />

@@ -10,7 +10,7 @@ function CreateAccount(props) {
     const InsertAccount = (e) => {
         e.preventDefault();
         const data = {
-            id: props.match.params.id, age: accountDetails.age, date: accountDetails.date, name: accountDetails.name,
+            id: accountDetails.id, age: accountDetails.age, date: accountDetails.date, name: accountDetails.name,
             mobile: accountDetails.mobile, userId: accountDetails.userId, balance: accountDetails.balance, deposit: accountDetails.deposit,
             location: accountDetails.location, withdraw: accountDetails.withdraw, accountNo: accountDetails.accountNo
         }
