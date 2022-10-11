@@ -2,16 +2,19 @@ import React from 'react'
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 function AccountList(props) {
+
     const [data, setData] = useState([]);
     const [data1, setData1] = useState([]);
+
     const GetData = async () => {
         const result = await axios('https://api-generator.retool.com/4dcBri/data');
         setData(result.data);
     };
-    useEffect(() => {
 
+    useEffect(() => {
         GetData();
     }, []);
+
     let deleteeployee = (l) => {
         alert(l.id)
         let g = l.id
@@ -21,11 +24,13 @@ function AccountList(props) {
             });
         GetData();
     };
+
     let editemployee = (l) => {
         props.history.push({
             pathname: '/edit/' + l.id
         });
     };
+
     function handleChange(event) {
         let l=String(event.target.value);
         let arr=[]
@@ -47,6 +52,7 @@ function AccountList(props) {
             }
             
       }
+      
     return (
         <div className="account-list">
             <div>

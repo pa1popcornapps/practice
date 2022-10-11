@@ -25,6 +25,8 @@ import ControlledForms from './documentation/forms/ControlledForms';
 import AccountApi from './documentation/atm/AccountApi';
 import ParentP from './documentation/data-transfer/parent-to-child/ParentP';
 import ParentC from './documentation/data-transfer/child-to-parent/ParentC';
+import SibilingA from './documentation/data-transfer/sibilings/SibilingA';
+import Routing from './documentation/routings/Routing';
 import {
     BrowserRouter as Router,
     Switch,
@@ -114,7 +116,7 @@ export default function SideBar() {
                                                     <Link to="/documentation/data-transfer/child-to-parent/ParentC" >Child To Parent</Link>
                                                 </li>
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                                    <Link to="/documentation/forms/UnControlledForms" >Between Sibilings</Link>
+                                                    <Link to="/documentation/data-transfer/sibilings/SibilingA" >Between Sibilings</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -126,7 +128,7 @@ export default function SideBar() {
                                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                             <ul class="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                                    <Link to="/documentation/forms/ControlledForms" >Routs</Link>
+                                                    <Link to="/documentation/routings/Routing" >Routs</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -281,6 +283,12 @@ export default function SideBar() {
                         </Route>
                         <Route path="/documentation/data-transfer/child-to-parent/ParentC">
                             <ParentC/>
+                        </Route>
+                        <Route path="/documentation/data-transfer/sibilings/SibilingA">
+                            <SibilingA/>
+                        </Route>
+                        <Route path="/documentation/routings/Routing">
+                            <Routing/>
                         </Route>
                         <Route path="/documentation/forms/ControlledForms">
                             <ControlledForms />

@@ -13,17 +13,16 @@ function ControlledForms() {
     }
 
     const submitButton = () => {
-        console.log(inputField)
         alert(inputField.gmail)
     }
     return (
         <div className="use-context">
             <h5>Controlled Forms</h5>
-            <b>Controlled components are mainly those where any prop value of the component is either
-                from the parent component or from the store (as in case of redux).
-                <p>Example:-</p>
-                <p>Which Uses Props Of The component and Ref</p>
-                <p>value="this.props.fromParent"</p></b>
+            <b>In case of an uncontrolled component, the component value can be taken
+                from the state of the component depending on the event handling.</b>
+            <p>Example:-</p>
+            <p>Which Uses States Of The Component</p>
+            <p>value="this.state.independentValue"</p>
 
             <form>
                 <input
@@ -32,27 +31,21 @@ function ControlledForms() {
                     onChange={inputsHandler}
                     placeholder="First Name"
                     value={inputField.first_name} />
-
                 <br />
-
                 <input
                     type="text"
                     name="last_name"
                     onChange={inputsHandler}
                     placeholder="Lirst Name"
                     value={inputField.last_name} />
-
                 <br />
-
                 <input
                     type="gmail"
                     name="gmail"
                     onChange={inputsHandler}
                     placeholder="Gmail"
                     value={inputField.gmail} />
-
                 <br />
-
                 <button onClick={submitButton}>Submit Now</button>
             </form>
         </div>

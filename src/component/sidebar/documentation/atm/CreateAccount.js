@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 function CreateAccount(props) {
+
     const [accountDetails, setAccount] = useState({
         id: '', age: '', date: '', name: '',
         mobile: '', userId: '', balance: '', deposit: '', location: '', withdraw: '', accountNo: ''
@@ -19,10 +20,12 @@ function CreateAccount(props) {
                 props.history.push('/AccountList')
             });
     };
+
     const onChange = (e) => {
         e.persist();
         setAccount({ ...accountDetails, [e.target.name]: e.target.value });
     }
+
     return (
         <div className="create-account">
             <h5>Create Account</h5>
@@ -94,5 +97,6 @@ function CreateAccount(props) {
         </div>
         </div>
     );
+    
 }
 export default CreateAccount;

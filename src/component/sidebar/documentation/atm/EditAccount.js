@@ -6,35 +6,41 @@ function EditAccount(props) {
         id: '', age: '', date: '', name: '',
         mobile: '', userId: '', balance: '', deposit: '', location: '', withdraw: '', accountNo: ''
     });
+
     const [fullData, setFullAccount] = useState({
         id: '', age: '', date: '', name: '',
         mobile: '', userId: '', balance: '', deposit: '', location: '', withdraw: '', accountNo: ''
     })
+
     const [bal, setBal] = useState()
     const Url = "https://api-generator.retool.com/4dcBri/data/" + props.match.params.id;
     const fullUrl = "https://api-generator.retool.com/4dcBri/data"
+
     const GetFullData = async () => {
         const result = await axios(fullUrl);
         setFullAccount(result.data);
     };
+
     useEffect(() => {
-
         GetFullData();
-
     }, [fullUrl]);
 
     let lastArr = [];
     let x;
+
     for (let i = 0; i < fullData.length; i++) {
         if (fullData[i].accountNo === accountDetails.accountNo) {
             lastArr.push(fullData[i])
         }
     }
+
     if (lastArr.length >= 1) {
         x = lastArr[lastArr.length - 1].accountNo
     };
+
     let b;
     let y;
+
     const handleInputDeposit = (e) => {
         e.persist();
         if (lastArr.length >= 1) {
@@ -43,6 +49,7 @@ function EditAccount(props) {
             setBal(y);
         }
     }
+
     const handleInputWithdraw = (e) => {
         e.persist();
         if (lastArr.length >= 1) {
@@ -50,8 +57,8 @@ function EditAccount(props) {
             y = b - Number(e.target.value)
             setBal(y);
         }
-
     }
+
     useEffect(() => {
         const GetData = async () => {
             const result = await axios(Url);
@@ -59,8 +66,6 @@ function EditAccount(props) {
         };
         GetData();
     }, [Url]);
-
-
 
     const UpdateAccount = (e) => {
         e.preventDefault();
@@ -73,12 +78,13 @@ function EditAccount(props) {
             .then((result) => {
                 props.history.push('/AccountList')
             });
-
     };
+
     const onChange = (e) => {
         e.persist();
         setAccount({ ...accountDetails, [e.target.name]: e.target.value });
     }
+
     return (
         <div>
             <div>
@@ -149,7 +155,7 @@ function EditAccount(props) {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 export default EditAccount;
