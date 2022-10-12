@@ -48,13 +48,13 @@ export default function SideBar() {
                         <h3>React Side Bar With Router Concept</h3>
                         <nav>
                             <div>
-                                <div class="accordion" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                                <div className="accordion" id="accordionExample">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
                                             <h5 className="text-center">Introduction</h5>
                                         </button>
-                                        <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseZero" className="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/about" >About</Link>
                                                 </li>
@@ -64,12 +64,12 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                             <h5>React State & Props For Class Component</h5>
                                         </button>
-                                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/state-props/State" >State</Link>
                                                 </li>
@@ -85,12 +85,12 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             <h5>React Component-Api For Class Component</h5>
                                         </button>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/component-api/SetState" >Set State</Link>
                                                 </li>
@@ -103,12 +103,12 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             <h5>React Data Transferring</h5>
                                         </button>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/data-transfer/parent-to-child/ParentP" >Parent To Child</Link>
                                                 </li>
@@ -121,24 +121,24 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                             <h5>React Routings</h5>
                                         </button>
-                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/routings/Routing" >Routs</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                             <h5>React forms</h5>
                                         </button>
-                                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/forms/ControlledForms" >Controlled Forms</Link>
                                                 </li>
@@ -148,12 +148,12 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                             <h5>React functional component Hooks</h5>
                                         </button>
-                                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/hooks/functional-hooks/UseState" >Use State</Link>
                                                 </li>
@@ -166,12 +166,12 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                                             <h5>Additional React functional component Hooks</h5>
                                         </button>
-                                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseSeven" className="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/hooks/functional-hooks/additional-hooks/UseCallback" >Use Callback</Link>
                                                 </li>
@@ -196,48 +196,48 @@ export default function SideBar() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                                             <h5>React class component Hooks</h5>
                                         </button>
-                                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseEight" className="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/hooks/class-hooks/HooksSequence" >Class Component Hooks</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                                             <h5>React Api Calls</h5>
                                         </button>
-                                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseNine" className="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/api-call/EmployeeApi" >Employee Api Calls</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                                             <h5>Project With Out Redux</h5>
                                         </button>
-                                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseTen" className="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/atm/AccountApi" >Atm Project</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
                                             <h5>Project With Redux</h5>
                                         </button>
-                                        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
-                                            <ul class="accordion-body">
+                                        <div id="collapseEleven" className="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/api-call/EmployeeApi" >Atm Project</Link>
                                                 </li>
