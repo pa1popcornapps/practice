@@ -19,11 +19,7 @@ function App() {
   for (let key in restaurants) {
     if (restaurants[key].length) {
       for (let i = 0; i <= restaurants[key].length; i++) {
-        if (restaurants[key][i].id != undefined) {
           console.log(restaurants[key][i].id);
-        } else {
-
-        }
       }
     } else {
 
