@@ -15,17 +15,6 @@ function App() {
       .catch((error) => setError(error))
 
   }, [])
-
-  for (let key in restaurants) {
-    if (restaurants[key].length) {
-      for (let i = 0; i <= restaurants[key].length; i++) {
-          console.log(restaurants[key][i].id);
-      }
-    } else {
-
-    }
-  }
- 
   if (error) {
     // Print errors if any
     return <div>An error occured: {error.message}</div>;
