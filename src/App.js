@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 function App() {
   const [error, setError] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
-
   useEffect(() => {
     axios
       .get('http://localhost:1337/api/tests')
@@ -15,9 +14,9 @@ function App() {
       .catch((error) => setError(error))
 
   }, [])
-  if (error) {
-    // Print errors if any
-    return <div>An error occured: {error.message}</div>;
+
+  for(let key in restaurants.data){
+    console.log(restaurants.data[key].id)
   }
   return (
     <div >
