@@ -27,6 +27,7 @@ import ParentP from './documentation/data-transfer/parent-to-child/ParentP';
 import ParentC from './documentation/data-transfer/child-to-parent/ParentC';
 import SibilingA from './documentation/data-transfer/sibilings/SibilingA';
 import Routing from './documentation/routings/Routing';
+import Redux from './documentation/redux/Redux';
 import {
     BrowserRouter as Router,
     Switch,
@@ -234,9 +235,21 @@ export default function SideBar() {
                                     </div>
                                     <div className="accordion-item">
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                            <h5>Project With Redux</h5>
+                                            <h5>Redux</h5>
                                         </button>
                                         <div id="collapseEleven" className="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                                            <ul className="accordion-body">
+                                                <li data-bs-toggle="offcanvas" data-bs-target="#demo">
+                                                    <Link to="/documentation/redux/Redux" >React With Redux</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="accordion-item">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                            <h5>Project With Redux</h5>
+                                        </button>
+                                        <div id="collapseTwelve" className="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
                                             <ul className="accordion-body">
                                                 <li data-bs-toggle="offcanvas" data-bs-target="#demo">
                                                     <Link to="/documentation/api-call/EmployeeApi" >Atm Project</Link>
@@ -331,6 +344,9 @@ export default function SideBar() {
                         </Route>
                         <Route path="/documentation/api-call/EmployeeApi">
                             <EmployeeApi />
+                        </Route>
+                        <Route path="/documentation/redux/Redux">
+                            <Redux/>
                         </Route>
                         <Route path="/documentation/atm/AccountApi">
                             <AccountApi />
