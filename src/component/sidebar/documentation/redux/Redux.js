@@ -1,16 +1,16 @@
 import React from "react";
-import { useSelector ,useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 export default function Redux() {
     const counter = useSelector((state) => state.counter)
-    const dispatch=useDispatch()
-    const increment =()=>{
-        dispatch({type:'INC'})
+    const dispatch = useDispatch()
+    const increment = () => {
+        dispatch({ type: 'INC' })
     }
-    const decrement =()=>{
-        dispatch({type:'DEC'})
+    const decrement = () => {
+        dispatch({ type: 'DEC' })
     }
-    const adds=()=>{
-        dispatch({type:"ADD",payload:10})
+    const adds = () => {
+        dispatch({ type: "ADD", payload: 10 })
     }
     return (
         <div className="use-state">

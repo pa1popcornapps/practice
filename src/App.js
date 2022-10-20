@@ -25,7 +25,6 @@ function App() {
       </div>
       <Body />
       <Footer />
-
     </div>
   );
 }
