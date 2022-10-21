@@ -3,7 +3,17 @@ import Header from "./component/header/Header"
 import Body from './component/body/Body';
 import Footer from './component/footer/Footer';
 import axios from 'axios';
+import Headers from './container/Headers';
 import { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import ProductDetail from './container/ProductDetail';
+import ProductListing from './container/ProductListing';
+import ProductComponent from './container/ProductComponent';
 function App() {
   const [error, setError] = useState(null);
   const [restaurants, setRestaurants] = useState([]);
@@ -24,6 +34,14 @@ function App() {
         <Header />
       </div>
       <Body />
+      <Router>
+          <Switch>
+            <Route path="/" exact component={ProductListing}/>
+            <Route path="/product/:productId" exact component={ProductDetail}/>
+            <Route>404 Not Found</Route>
+          </Switch>
+      </Router>
+      <Headers/>
       <Footer />
     </div>
   );
