@@ -3,7 +3,6 @@ import Header from "./component/header/Header"
 import Body from './component/body/Body';
 import Footer from './component/footer/Footer';
 import axios from 'axios';
-import Headers from './container/Headers';
 import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -41,7 +40,6 @@ function App() {
             <Route>404 Not Found</Route>
           </Switch>
       </Router>
-      <Headers/>
       <Footer />
     </div>
   );

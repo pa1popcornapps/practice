@@ -17,6 +17,7 @@ export default function ProductListing() {
     }, [])
     return (
         <div className="App">
+            <h1 className="text-center">Shopping Project With Redux</h1>
             <h5>Product Listing</h5>
             <ProductComponent />
         </div>
