@@ -1,4 +1,5 @@
 import { ActionTypes } from "../constants/action-types"
+import { CounterTypes } from "../constants/action-types"
 const initialState = {
     products: []
 }
@@ -22,13 +23,13 @@ export const selectedProductReducer = (state={}, { type, payload }) => {
 
 export const reducerFn=(state={counter:0},action)=>{
 
-    if(action.type==="INC"){
+    if(action.type===CounterTypes.INC){
         return {counter:state.counter+1}
     }
-    if(action.type==="DEC"){
+    if(action.type===CounterTypes.DEC){
         return {counter:state.counter-1}
     }
-    if(action.type==="ADD"){
+    if(action.type===CounterTypes.ADD){
         return {counter:state.counter+action.payload}
     }
     return state;
